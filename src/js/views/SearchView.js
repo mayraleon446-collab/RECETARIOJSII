@@ -1,1 +1,19 @@
-class SearchView{_parentEl=document.querySelector('.search');getQuery(){const q=this._parentEl.querySelector('.search__field').value.trim();this._parentEl.querySelector('.search__field').value='';return q;}addHandlerSearch(handler){this._parentEl.addEventListener('submit',e=>{e.preventDefault();handler();});}} export default new SearchView();
+class SearchView {
+  _parentElement = document.querySelector('.search');
+
+  getQuery() {
+    const field = this._parentElement.querySelector('.search__field');
+    const query = field.value.trim();
+    field.value = '';
+    return query;
+  }
+
+  addHandlerSearch(handler) {
+    this._parentElement.addEventListener('submit', event => {
+      event.preventDefault();
+      handler();
+    });
+  }
+}
+
+export default new SearchView();

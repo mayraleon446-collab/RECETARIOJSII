@@ -1,55 +1,63 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Forkify Postres | Avance 3</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="./src/css/style.css">
-        <script type="module" src="./src/js/controller.js"></script>
-    </head>
-    <body>
-        <main class="app-shell">
-            <header class="header">
-                <a class="brand" href="#">
-                    <span class="brand__icon">🧁</span>
-                    <span>
-                        <strong>Forkify</strong>
-                        <em>Postres</em>
-                    </span>
-                </a>
-                <form class="search">
-                    <span class="search__icon">⌕</span>
-                    <input class="search__field" placeholder="Busca cake, chocolate, strawberry…">
-                    <button class="search__btn" type="submit">Buscar</button>
-                </form>
-                <span class="stage-pill">Avance 3</span>
-            </header>
-            <section class="intro intro--compact">
-                <div>
-                    <span class="eyebrow">BÚSQUEDA · VISTAS · EVENTOS</span>
-                    <h1>Busca tu siguiente antojo.</h1>
-                    <p>La búsqueda ya funciona y los resultados se renderizan con vistas reutilizables.</p>
-                </div>
-            </section>
-            <section class="workspace">
-                <aside class="results-panel">
-                    <div class="results"></div>
-                </aside>
-                <section class="recipe" aria-live="polite">
-                    <div class="message">
-                        <div class="message__icon">🍓</div>
-                        <h2>Busca un postre</h2>
-                        <p>Prueba con cake, chocolate o strawberry.</p>
-                    </div>
-                </section>
-            </section>
-            <footer class="footer">
-                <span>Forkify Postres</span>
-                <span>Programación con JavaScript II · Avance 3</span>
-            </footer>
-        </main>
-    </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Forkify Postres - recetas dulces con JavaScript MVC" />
+  <title>Forkify Postres</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./src/css/style.css" />
+  <script type="module" src="./src/js/controller.js"></script>
+</head>
+<body>
+  <div class="app-shell">
+    <header class="header">
+      <a class="brand" href="#" aria-label="Forkify Postres">
+        <span class="brand__mark">♨</span>
+        <span class="brand__copy"><strong>Forkify</strong><em>Postres</em></span>
+      </a>
+      <span class="header__tag"><i></i> Tu compañero de cocina</span>
+    </header>
+
+    <main>
+      <section class="hero-intro">
+        <div>
+          <p class="eyebrow">COCINA, HORNEA, REPITE</p>
+          <h1>Un buen postre cambia el día.</h1>
+        </div>
+        <form class="search" aria-label="Buscar recetas">
+          <span class="search__icon">⌕</span>
+          <input class="search__field" type="search" placeholder="Busca cake, chocolate, strawberry..." autocomplete="off" />
+          <button class="search__btn" type="submit">Buscar</button>
+        </form>
+      </section>
+
+      <section class="workspace">
+        <aside class="results-panel">
+          <div class="results-panel__heading">
+            <p class="eyebrow">RESULTADOS</p>
+            <h2>Ideas dulces para preparar</h2>
+          </div>
+          <div class="results"></div>
+          <div class="pagination" aria-label="Paginación"></div>
+        </aside>
+
+        <section class="recipe" aria-live="polite">
+          <div class="message message--welcome">
+            <span class="message__icon">🍰</span>
+            <h2>Busca tu próximo postre favorito</h2>
+            <p>Escribe un ingrediente o tipo de postre para comenzar.</p>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>Hecho para aprender JavaScript horneando.</span>
+      <span>MVC / AVANCE 4</span>
+    </footer>
+  </div>
+</body>
 </html>

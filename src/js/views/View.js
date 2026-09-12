@@ -1,1 +1,36 @@
-export default class View{render(data){this._data=data;if(!data||(Array.isArray(data)&&data.length===0))return this.renderError();this._clear();this._parentElement.insertAdjacentHTML('afterbegin',this._generateMarkup());}renderSpinner(){this._parentElement.innerHTML='<div class="spinner-wrap"><div class="spinner"></div><p>Buscando algo dulce…</p></div>';}renderError(message=this._errorMessage||'No se encontraron recetas.'){this._parentElement.innerHTML=`<div class="message"><div class="message__icon">🍪</div><h2>Sin resultados</h2><p>${message}</p></div>`;}renderMessage(message=this._message||'Listo'){this._parentElement.innerHTML=`<div class="message"><div class="message__icon">😊</div><p>${message}</p></div>`;} _clear(){this._parentElement.innerHTML='';}}
+export default class View {
+  _data;
+
+  render(data) {
+    if (!data || (Array.isArray(data) && data.length === 0)) return this.renderError();
+    this._data = data;
+    const markup = this._generateMarkup();
+    this._clear();
+    this._parentElement.insertAdjacentHTML('afterbegin', markup);
+  }
+
+  _clear() {
+    this._parentElement.innerHTML = '';
+  }
+
+  renderSpinner() {
+    const markup = `
+      <div class="spinner-wrap">
+        <span class="spinner"></span>
+        <p>Cocinando los detalles...</p>
+      </div>`;
+    this._clear();
+    this._parentElement.insertAdjacentHTML('afterbegin', markup);
+  }
+
+  renderError(message = this._errorMessage || 'Algo salió mal. Intenta nuevamente.') {
+    const markup = `
+      <div class="message">
+        <span class="message__icon">⚠</span>
+        <h2>No encontramos lo que buscabas</h2>
+        <p>${message}</p>
+      </div>`;
+    this._clear();
+    this._parentElement.insertAdjacentHTML('afterbegin', markup);
+  }
+}

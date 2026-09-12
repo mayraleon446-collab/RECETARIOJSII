@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Forkify Postres | Avance 2</title>
+        <title>Forkify Postres | Avance 3</title>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
@@ -20,28 +20,35 @@
                         <em>Postres</em>
                     </span>
                 </a>
-                <div class="search search--disabled">
+                <form class="search">
                     <span class="search__icon">⌕</span>
-                    <input class="search__field" placeholder="La búsqueda se activa en el Avance 3" disabled>
-                    <button class="search__btn" disabled>Buscar</button>
-                </div>
-                <span class="stage-pill">Avance 2</span>
+                    <input class="search__field" placeholder="Busca cake, chocolate, strawberry…">
+                    <button class="search__btn" type="submit">Buscar</button>
+                </form>
+                <span class="stage-pill">Avance 3</span>
             </header>
-            <section class="intro">
+            <section class="intro intro--compact">
                 <div>
-                    <span class="eyebrow">MVC · MÓDULOS · API</span>
-                    <h1>La misma receta, ahora con una arquitectura más limpia.</h1>
-                    <p>En este avance separamos modelo, controlador, configuración, helpers y vista de receta.</p>
-                </div>
-                <div class="intro__note">
-                    <span>🧩</span>
-                    <p>La receta cambia al modificar el hash de la URL y la carga se organiza con MVC.</p>
+                    <span class="eyebrow">BÚSQUEDA · VISTAS · EVENTOS</span>
+                    <h1>Busca tu siguiente antojo.</h1>
+                    <p>La búsqueda ya funciona y los resultados se renderizan con vistas reutilizables.</p>
                 </div>
             </section>
-            <section class="recipe" aria-live="polite"></section>
+            <section class="workspace">
+                <aside class="results-panel">
+                    <div class="results"></div>
+                </aside>
+                <section class="recipe" aria-live="polite">
+                    <div class="message">
+                        <div class="message__icon">🍓</div>
+                        <h2>Busca un postre</h2>
+                        <p>Prueba con cake, chocolate o strawberry.</p>
+                    </div>
+                </section>
+            </section>
             <footer class="footer">
                 <span>Forkify Postres</span>
-                <span>Programación con JavaScript II · Avance 2</span>
+                <span>Programación con JavaScript II · Avance 3</span>
             </footer>
         </main>
     </body>

@@ -29,6 +29,10 @@ a {
   color: inherit;
 }
 
+/* =========================
+   CONTENEDOR PRINCIPAL
+========================= */
+
 .app-shell {
   width: min(118rem, calc(100% - 3rem));
   margin: 3rem auto;
@@ -39,7 +43,9 @@ a {
   box-shadow: 0 2.5rem 8rem rgba(67, 43, 30, 0.16);
 }
 
-/* HEADER */
+/* =========================
+   HEADER
+========================= */
 
 .header {
   min-height: 9.2rem;
@@ -92,7 +98,9 @@ a {
   text-transform: uppercase;
 }
 
-/* SEARCH */
+/* =========================
+   BUSCADOR
+========================= */
 
 .search {
   height: 5.4rem;
@@ -148,7 +156,9 @@ a {
   text-transform: uppercase;
 }
 
-/* INTRO */
+/* =========================
+   INTRO
+========================= */
 
 .intro {
   display: grid;
@@ -201,7 +211,14 @@ a {
   letter-spacing: 0.2em;
 }
 
-/* RECIPE */
+.intro--compact {
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+}
+
+/* =========================
+   RECETA
+========================= */
 
 .recipe {
   min-height: 45rem;
@@ -254,7 +271,9 @@ a {
   background: #fffdf9;
 }
 
-/* HERO */
+/* =========================
+   HERO DE RECETA
+========================= */
 
 .recipe-hero {
   position: relative;
@@ -320,13 +339,15 @@ a {
   opacity: 0.88;
 }
 
-/* META */
+/* =========================
+   DATOS DE RECETA
+========================= */
 
 .recipe-meta {
   display: flex;
   align-items: center;
-  gap: 3rem;
-  padding: 2rem 4rem;
+  gap: 3.5rem;
+  padding: 2.4rem 4rem;
   border-bottom: 1px solid #eadfd8;
 }
 
@@ -337,7 +358,7 @@ a {
 }
 
 .meta-item__icon {
-  font-size: 2rem;
+  font-size: 2.1rem;
 }
 
 .meta-item small {
@@ -345,7 +366,7 @@ a {
   color: #7a6b63;
   font-size: 1rem;
   font-weight: 800;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.14em;
 }
 
 .meta-item strong {
@@ -356,12 +377,12 @@ a {
 
 .source-btn {
   margin-left: auto;
-  padding: 1.2rem 2rem;
+  padding: 1.2rem 1.7rem;
   border-radius: 999rem;
   background: #d95d39;
   color: #fff;
-  font-size: 1.3rem;
-  font-weight: 800;
+  font-size: 1.35rem;
+  font-weight: 700;
   text-decoration: none;
   transition: 0.2s ease;
 }
@@ -371,19 +392,21 @@ a {
   transform: translateY(-1px);
 }
 
-/* INGREDIENTS */
+/* =========================
+   INGREDIENTES
+========================= */
 
 .ingredients-section {
   display: grid;
   grid-template-columns: 0.85fr 1.4fr;
-  gap: 4rem;
-  padding: 4rem 4rem 5rem;
+  gap: 5rem;
+  padding: 5rem 6rem 6rem;
 }
 
 .section-heading h3 {
-  margin: 0.8rem 0 1rem;
+  margin: 1rem 0 1.2rem;
   font-family: 'Playfair Display', serif;
-  font-size: 3rem;
+  font-size: 3.2rem;
   line-height: 1.08;
 }
 
@@ -397,7 +420,7 @@ a {
 .ingredients-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1.2rem;
+  gap: 1rem;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -440,19 +463,110 @@ a {
   line-height: 1.35;
 }
 
-/* FOOTER */
+/* =========================
+   WORKSPACE / RESULTADOS
+========================= */
+
+.workspace {
+  display: grid;
+  grid-template-columns: 34rem 1fr;
+  min-height: 65rem;
+}
+
+.results-panel {
+  border-right: 1px solid #eadfd8;
+  background: #fffaf6;
+}
+
+.results {
+  padding: 1.5rem;
+}
+
+.results .spinner-wrap,
+.results .message {
+  min-height: 22rem;
+  padding: 2rem;
+}
+
+.preview {
+  display: grid;
+  grid-template-columns: 7rem 1fr;
+  gap: 1.2rem;
+  align-items: center;
+  padding: 1.2rem;
+  border-radius: 1.3rem;
+  text-decoration: none;
+}
+
+.preview:hover {
+  background: #f8ece6;
+}
+
+.preview img {
+  width: 7rem;
+  height: 7rem;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+.preview h4 {
+  margin: 0 0 0.5rem;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.55rem;
+  line-height: 1.1;
+}
+
+.preview p {
+  margin: 0;
+  color: #9a7c70;
+  font-size: 1.15rem;
+}
+
+.workspace .recipe-hero {
+  height: 38rem;
+}
+
+.workspace .ingredients-section {
+  grid-template-columns: 1fr;
+  padding: 3.5rem;
+}
+
+.workspace .ingredients-grid {
+  grid-template-columns: 1fr 1fr;
+}
+
+/* =========================
+   FOOTER
+========================= */
 
 .footer {
   display: flex;
   justify-content: space-between;
   gap: 2rem;
-  padding: 2rem 4rem;
+  padding: 2rem 3rem;
   border-top: 1px solid #eadfd8;
   color: #7a6b63;
   font-size: 1.2rem;
 }
 
-/* RESPONSIVE */
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 850px) {
+  .workspace {
+    grid-template-columns: 1fr;
+  }
+
+  .results-panel {
+    border-right: 0;
+    border-bottom: 1px solid #eadfd8;
+  }
+
+  .workspace .ingredients-grid {
+    grid-template-columns: 1fr;
+  }
+}
 
 @media (max-width: 800px) {
   .header {

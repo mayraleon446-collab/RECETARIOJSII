@@ -1,9 +1,5 @@
-FORKIFY POSTRES - AVANCE 1
-
-1. Abre esta carpeta en Visual Studio Code.
-2. Abre una terminal dentro de esta misma carpeta.
-3. Ejecuta: npm install
-4. Después ejecuta: npm start
-5. Abre http://localhost:1234
-
-Este proyecto usa CSS normal para evitar problemas con Sass y corresponde al Avance 1.
+FORKIFY POSTRES - AVANCE 2
+1) npm install
+2) npm start
+3) Abrir http://localhost:1234
+Incluye: MVC, módulos, model.js, RecipeView.js, config.js, helpers.js y navegación por hash.

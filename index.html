@@ -1,51 +1,48 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Forkify Postres - Avance 1" />
-  <title>Forkify Postres | Avance 1</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./src/css/style.css" />
-  <script type="module" src="./src/js/controller.js"></script>
-</head>
-<body>
-  <main class="app-shell">
-    <header class="header">
-      <a class="brand" href="#" aria-label="Forkify Postres">
-        <span class="brand__icon">🧁</span>
-        <span><strong>Forkify</strong><em>Postres</em></span>
-      </a>
-      <div class="search search--disabled" aria-label="Búsqueda disponible en un avance posterior">
-        <span class="search__icon">⌕</span>
-        <input class="search__field" type="text" placeholder="Busca cake, chocolate, strawberry…" disabled />
-        <button class="search__btn" type="button" disabled>Buscar</button>
-      </div>
-      <span class="stage-pill">Avance 1</span>
-    </header>
-
-    <section class="intro">
-      <div>
-        <span class="eyebrow">RECETAS DULCES · API · JAVASCRIPT</span>
-        <h1>Un postre bonito empieza con una buena receta.</h1>
-        <p>En este primer avance cargamos una receta desde la API, mostramos sus datos e ingredientes y manejamos el estado de carga.</p>
-      </div>
-      <div class="intro__note">
-        <span>🍓</span>
-        <p>La búsqueda interactiva se habilitará en un avance posterior.</p>
-      </div>
-    </section>
-
-    <section class="recipe" aria-live="polite">
-      <div class="message"><div class="message__icon">🍰</div><p>Cargando una receta de postre…</p></div>
-    </section>
-
-    <footer class="footer">
-      <span>Forkify Postres</span>
-      <span>Programación con JavaScript II · Avance 1</span>
-    </footer>
-  </main>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Forkify Postres | Avance 2</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./src/css/style.css">
+        <script type="module" src="./src/js/controller.js"></script>
+    </head>
+    <body>
+        <main class="app-shell">
+            <header class="header">
+                <a class="brand" href="#">
+                    <span class="brand__icon">🧁</span>
+                    <span>
+                        <strong>Forkify</strong>
+                        <em>Postres</em>
+                    </span>
+                </a>
+                <div class="search search--disabled">
+                    <span class="search__icon">⌕</span>
+                    <input class="search__field" placeholder="La búsqueda se activa en el Avance 3" disabled>
+                    <button class="search__btn" disabled>Buscar</button>
+                </div>
+                <span class="stage-pill">Avance 2</span>
+            </header>
+            <section class="intro">
+                <div>
+                    <span class="eyebrow">MVC · MÓDULOS · API</span>
+                    <h1>La misma receta, ahora con una arquitectura más limpia.</h1>
+                    <p>En este avance separamos modelo, controlador, configuración, helpers y vista de receta.</p>
+                </div>
+                <div class="intro__note">
+                    <span>🧩</span>
+                    <p>La receta cambia al modificar el hash de la URL y la carga se organiza con MVC.</p>
+                </div>
+            </section>
+            <section class="recipe" aria-live="polite"></section>
+            <footer class="footer">
+                <span>Forkify Postres</span>
+                <span>Programación con JavaScript II · Avance 2</span>
+            </footer>
+        </main>
+    </body>
 </html>

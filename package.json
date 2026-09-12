@@ -1,13 +1,7 @@
 {
-  "name": "forkify-postres-avance-1",
+  "name": "forkify-postres-avance-2",
   "version": "1.0.0",
-  "description": "Avance 1 - Aplicación de recetas de postres con Forkify API",
   "source": "index.html",
-  "scripts": {
-    "start": "parcel index.html --port 1234",
-    "build": "parcel build index.html"
-  },
-  "devDependencies": {
-    "parcel": "^2.8.0"
-  }
+  "scripts": {"start":"parcel index.html --port 1234","build":"parcel build index.html"},
+  "devDependencies": {"parcel":"^2.8.0"}
 }

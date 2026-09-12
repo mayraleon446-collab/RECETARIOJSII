@@ -1,0 +1,10 @@
+class RecipeView {
+  _parentElement = document.querySelector('.recipe');
+  render(data){this._data=data;this._clear();this._parentElement.insertAdjacentHTML('afterbegin',this._generateMarkup());}
+  renderSpinner(){this._parentElement.innerHTML='<div class="spinner-wrap"><div class="spinner"></div><p>Preparando algo dulce…</p></div>';}
+  renderError(message='No pudimos cargar esa receta.'){this._parentElement.innerHTML=`<div class="message message--error"><div class="message__icon">🍪</div><h2>Algo salió mal</h2><p>${message}</p></div>`;}
+  addHandlerRender(handler){['hashchange','load'].forEach(ev=>window.addEventListener(ev,handler));}
+  _clear(){this._parentElement.innerHTML='';}
+  _generateMarkup(){const r=this._data;return `<article class="recipe-card"><figure class="recipe-hero"><img src="${r.image}" alt="${r.title}" class="recipe-hero__img"><div class="recipe-hero__shade"></div><div class="recipe-hero__label">POSTRE DEL DÍA</div><div class="recipe-hero__title"><span>RECETA / ${r.id.slice(-5).toUpperCase()}</span><h2>${r.title}</h2><p>Publicado por ${r.publisher}</p></div></figure><div class="recipe-meta"><div class="meta-item"><span class="meta-item__icon">⏱</span><div><small>TIEMPO</small><strong>${r.cookTime} min</strong></div></div><div class="meta-item"><span class="meta-item__icon">♙</span><div><small>PORCIONES</small><strong>${r.servings} personas</strong></div></div><a class="source-btn" href="${r.sourceUrl}" target="_blank" rel="noreferrer">Ver receta original ↗</a></div><section class="ingredients-section"><div class="section-heading"><span class="eyebrow">ANTES DE ENCENDER EL HORNO</span><h3>Ten todos los ingredientes a mano.</h3><p>Ahora esta vista recibe sus datos desde el modelo.</p></div><ul class="ingredients-grid">${r.ingredients.map(i=>`<li class="ingredient"><span class="ingredient__check">✓</span><div><strong>${i.quantity??''} ${i.unit??''}</strong><span>${i.description}</span></div></li>`).join('')}</ul></section></article>`;}
+}
+export default new RecipeView();
